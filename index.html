@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="App">
+        <div class="container">
+          <div class="calculadora"> 
+              <h1>Calculadora</h1>
+              <form id="formDisplay" >
+                  <input id="display" type="text"/>
+              </form>
+              <div class="flex-container">
+                <div onclick="push(id)" id=7>7</div>  
+                <div onclick="push(id)" id=8>8</div>
+                <div onclick="push(id)" id=9>9</div>
+                <div onclick="calcular(id)" id=+>+</div>
+              </div>
+              <div class="flex-container">
+                <div onclick="push(id)" id=4>4</div>
+                <div onclick="push(id)" id=5>5</div>
+                <div onclick="push(id)" id=6>6</div>
+                <div onclick="calcular(id)" id=->-</div>  
+              </div>
+              <div class="flex-container">
+                <div onclick="push(id)"  id=1>1</div>
+                <div onclick="push(id)"  id=2>2</div>
+                <div onclick="push(id)"  id=3>3</div>  
+                <div onclick="calcular(id)" id=*>X</div>
+              </div>
+              <div class="flex-container">
+                <div onclick="push(id)" id=0>0</div>
+                <div onclick="push(id)" id=.>.</div>
+                <div onclick="calcular(id)" id=/>/</div>  
+                <div onclick="calcular(id)" id==>=</div>
+              </div>
+    
+          </div>
+        </div>  
+          
+      </div>
+   
+<script src="functions.js"></script>    
+</body>
+</html>
