@@ -1,10 +1,7 @@
 console.log("JS is running");
 
-
 const display = document.getElementById('display');
-//var uno = document.getElementById("uno");
-//uno.addEventListener("click", botonUno);
-//uno.addEventListener("mousedown", botonUnoDown);
+
 let valor1;
 let ClickNumero =  false;
 let resultado = null;
@@ -18,10 +15,11 @@ function push(id) {
     valor1 = (parseFloat(display.value));
 }  
 function calcular(id) {
+    
     ClickNumero = false;
     click(id);
     display.value = valor1;
-                                    console.log(valor1+"<br>"+ operador+"<br>"+ resultado);
+    
     switch (operador) {
         case "+" :
             if(resultado == null){resultado = 0;}
@@ -37,13 +35,15 @@ function calcular(id) {
         break;
         case "/" :
             if(resultado == null){resultado = 1;}
-            resultado = resultado / valor1;
+            resultado = (resultado / valor1);
+        break;
+        
         case null :
             resultado = valor1;
         break;
 
     }
-    if (id == "=") {
+    if (id == "=" || id == "Enter") {
         display.value = resultado;
         operador = null;
         valor1 = null;
@@ -53,7 +53,11 @@ function calcular(id) {
 }
 
 function click(id){
-let boton = document.getElementById(id); 
+    if ( id == "Enter"){
+        id = "=";
+    }
+    
+    let boton = document.getElementById(id); 
     boton.style.cssText = " transform: translate(3px,3px); box-shadow:none; transition: all 0.08s linear";
     setTimeout(function (){boton.style.cssText = " transform: translate(0,0);transition: transition: all 0.08s linear"},80); 
 }
@@ -61,4 +65,28 @@ let boton = document.getElementById(id);
 function limpiarDisplay(){
     display.value = " ";
 }
+document.addEventListener('keydown', (e) => { 
+    let key = e.key;
+    console.log(key);
+    keyboard(key);
+
+});
+
+function keyboard(key){
+    
+    if( key <= 9){
+        push(key);
+    }else{
+        if ( key=="+" || key=="-" || key=="*"  || key=="/" || key == "Enter" ){
+            calcular(key);
+        }else {
+            return;
+        }
+    
+    }
+}
+function myFunction(event) {
+    var x = event.key;
+    console.log("la tecla es la" + x)
+    }
 
