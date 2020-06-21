@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    font-family: 'PT Sans', sans-serif;
+}
+
+    .calculator {
+        background-color: #D7D2CF;
+        box-shadow: 1rem 1rem 0.5rem #474747;
+        border-radius: 0 !important;
+    }
+    .calculator > h1 {
+        text-align: left;
+        font-size: 25px !important;
+        height: 30px;
+      color: white;
+      background-image:  linear-gradient(to right, rgba(11,33,103,1), rgba(165,203,230,1));
+    }
+    #display {
+        width: 95% !important;
+        height: 1.5rem !important;
+        border: 3px solid;
+      border-color: #37373A  white   white #37373A;
+    }
+  .calculator--buttons--row {
+      background-color: #D7D2CF;
+    }
+    
+    .calculator--buttons--row > div {
+        margin: 2px !important;
+      background-color: #D7D2CF;
+      color:#534786 ;
+      border: 3px solid;
+      border-color: white #37373A #37373A white;
+      /*box-shadow: 3px 3px black;*/
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .calculator--button-sign {
+        
+    
+     color: red !important;
+    }
+
+    .theme--button {
+    background-color: #D7D2CF;
+    color:#534786 ;
+    border: 3px solid;
+    border-color: white #37373A #37373A white;
+    border-radius: 0 !important;
+    box-shadow: none !important;

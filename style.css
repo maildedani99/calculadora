@@ -1,0 +1,77 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@669&display=swap');
+
+*{
+    font-family: 'Orbitron', sans-serif;
+}
+.app {
+    display: flex;
+    width: 100vw;
+}
+.calculator--container {
+    width: 17rem;
+    height: 15rem;
+    margin: auto;
+    justify-content: center;
+    
+    padding: 1rem;
+}   
+.calculator {
+    width: 100%;
+    text-align: center;   
+    border-radius: 15px;
+    padding: 1rem;
+    margin: auto;
+}
+.calculator:hover {
+    cursor:pointer;
+}
+.calculator > h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+#display {
+    line-height: 3rem;
+    font-size: 2rem;
+    text-align: right;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    width: 90%;
+    padding: 0rem;
+    box-shadow: 10px;
+    letter-spacing: 4px;
+}
+.calculator--buttons--row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+.calculator--buttons--row > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 30px;
+    border-radius: 30px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+}
+    
+.calculator--container--theme--buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    line-height: 50px;
+    justify-content: space-around;
+}
+.theme--button {
+    line-height: 30px;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    border-radius: 30px;
+}
+.theme--button:focus {
+    outline: none;
+}

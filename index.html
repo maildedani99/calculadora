@@ -1,49 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="style3.css">
+    <link  rel="stylesheet" href="style.css">
+    <link id="theme--css" rel="stylesheet" href="dark.css">
+
 </head>
 <body>
-    <div class="App">
-        <div class="container">
-          <div class="calculadora"> 
+    <div class="app">
+        <div class="calculator--container">
+          <div class="calculator">     
               <h1>Calculadora</h1>
               <form id="formDisplay" >
                   <input id="display"  type="text"/>
               </form>
-              <div class="flex-container">
+              <div class="calculator--buttons--row">
                 <div onclick="push(id)" id=7>7</div>  
                 <div onclick="push(id)" id=8>8</div>
                 <div onclick="push(id)" id=9>9</div>
-                <div onclick="calcular(id)" id=+>+</div>
+                <div class="calculator--button-sign" onclick="calcular(id)" id=+>+</div>
               </div>
-              <div class="flex-container">
+              <div class="calculator--buttons--row">
                 <div onclick="push(id)" id=4>4</div>
                 <div onclick="push(id)" id=5>5</div>
                 <div onclick="push(id)" id=6>6</div>
-                <div onclick="calcular(id)" id=->-</div>  
+                <div class="calculator--button-sign" onclick="calcular(id)" id=->-</div>  
               </div>
-              <div class="flex-container">
+              <div class="calculator--buttons--row">
                 <div onclick="push(id)"  id=1>1</div>
                 <div onclick="push(id)"  id=2>2</div>
                 <div onclick="push(id)"  id=3>3</div>  
-                <div onclick="calcular(id)" id=*>X</div>
+                <div class="calculator--button-sign" onclick="calcular(id)" id=*>X</div>
               </div>
-              <div class="flex-container">
+              <div class="calculator--buttons--row">
                 <div onclick="push(id)" id=0>0</div>
-                <div onclick="push(id)" id=.>.</div>
-                <div onclick="calcular(id)" id=/>/</div>  
-                <div onclick="calcular(id)" id==>=</div>
+                <div class="calculator--button-sign" onclick="push(id)" id=.>.</div>
+                <div class="calculator--button-sign" onclick="calcular(id)" id=/>/</div>  
+                <div class="calculator--button-sign" onclick="calcular(id)" id==>=</div>
+                
               </div>
-    
+              <form >
+                <br>
+               
+              <div class="calculator--container--theme--buttons">
+                Themes:
+                <button id="btn-light" class="theme--button theme--button--ligth" type="button" onclick="ligthTheme()">Ligth </button>
+                <button id="btn-dark" class="theme--button theme--button--dark" type="button" onclick="darkTheme()">Dark </button>
+                <button id="btn-w95" class="theme--button theme--button--w95" type="button" onclick="w95Theme()">W95 </button>
+              </div>
+            </form>
           </div>
         </div>  
-          <div id="demo"></div>
       </div>
    
-<script src="functions.js"></script>    
+<script src="functions.js"></script>  
+<script src="settings.js"></script> 
 </body>
 </html>
