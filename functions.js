@@ -11,6 +11,7 @@ function push(id) {    // funcion inserta valores clicados en display
     if(ClickNumero == false || valor1 == "0" ) {limpiarDisplay()}  // evita secuencias de signos en el display
     ClickNumero = true;  // controla si el ultimo boton pulsado fue un numero
     click(id); //ejecuta el click visual del boton
+    console.log(id);
     display.value += id;    // añade numero pulsado al display
     valor1 = (parseFloat(display.value));  // pasa el valor del display a un numero real
 }  
@@ -44,6 +45,9 @@ function calcular(id) {      // funcion que ejecutara toso el proceso del calcul
 
     }
     if (id == "=" || id == "Enter") {      //  tratamiento para el operador igual o tecla enter
+        if (Number.isInteger(resultado) == false){     // estye condicional controla que el resultado no tenga mas de dos decimales
+            resultado = (resultado.toFixed(2));
+        }
         display.value = resultado;  // muestra resultado en display
         operador = null;    // reinicia el operador a null
         valor1 = null;  // reinicia el valor inicial del display a null
@@ -73,7 +77,7 @@ document.addEventListener('keydown', (e) => {   // identifica las entradas por t
 
 function keyboard(key){   //  funcion que lanzada el valor pasado por teclado fisico a las unciones anteriores
     
-    if( key <= 9){
+    if( key <= 9  || key == "."){
         push(key);
     }else{
         if ( key=="+" || key=="-" || key=="*"  || key=="/" || key == "Enter" ){
