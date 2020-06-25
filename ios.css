@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
-*{
-    font-family: 'Digital-7' !important;
-}
 .calculator--container{
     width: 19rem;
 }
 
     .calculator {
-        background-image: url(./textura.jpg);
+        background-image: url(./textura2.jpg);
         background-color: #D7D2CF;
         box-shadow: 1rem 1rem 0.5rem #474747;
         border-radius: 0.5rem !important;
@@ -29,22 +25,25 @@
       border-color: #37373A  white   white #37373A;
     }
   .calculator--buttons--row {
+    background-image: url(./textura2.jpg);
+
       background-color: #D7D2CF;
     }
     
     .calculator--buttons--row > div {
         margin: 2px !important;
+        background-image: url(./textura.jpg);
       background-color: transparent;
       color:black ;
       font-size: 20px !important;
       line-height: 35px !important;
-      border: 1px solid;
+      border: 1.5px solid;
       border-color: black;
       border-bottom: 2px solid   black ;
       /*box-shadow: 3px 3px black;*/
       border-radius:  10px !important;
       box-shadow: 0px -2px 2px black inset !important  ;
-      box-shadow: 0px 4px 3px cornsilk inset !important;
+      box-shadow: 0px 5px 4px cornsilk inset !important;
     }
 
     .calculator--button-sign {
@@ -52,9 +51,11 @@
     }
 
     .theme--button {
+      background-image: url(./textura.jpg);
+
         background-color: transparent;
         color:black ;
-        font-size: 20px !important;
+        font-size: 15px !important;
         line-height: 35px !important;
         border: 1px solid;
         border-color: black;
